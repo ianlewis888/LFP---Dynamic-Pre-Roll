@@ -129,7 +129,7 @@
       display: block;
       text-align: left;
     }
-    @media gwd-media-rule-disabled and (max-height: 400px) {
+    @media (max-height: 400px) {
       .product-name {
         font-size: 0.7em;
       }
@@ -137,7 +137,7 @@
         font-size: 0.7em;
       }
     }
-    @media gwd-media-rule-disabled and (max-height: 500px) and (min-height: 400px) {
+    @media (max-height: 500px) and (min-height: 400px) {
       .product-name {
         font-size: 1em;
       }
@@ -173,7 +173,7 @@
       "Field10": "",
       "ClickThrough": "https%3A%2F%2Fwww.lowes.com%2Fpd%2Fallen-roth-Bethany-1-Gang-Champagne-bronze-Single-Decorator-Wall-Plate%2F50426920"
     };
-    /** 
+    /**
      *  Fade Video and Display Product Content
      */
     gwd.displayDynamicProduct = function(event) {
@@ -248,12 +248,11 @@
        */
 
       function handleDomContentLoaded(event) {
-        // This is a good place to show a loading or branding image while
-        // the ad loads.
+
         gwd.lfpVideo = document.getElementById("lfp-video");
         gwd.productContainer = document.getElementById("product-container");
         /**
-         * Set Product to Default Product -- this will need to be replaced with dynamic product from feed
+         * Fetch products from feed here, and assign gwd.product to first product object from results
          */
         gwd.product = gwd.defaultProduct;
         /**
